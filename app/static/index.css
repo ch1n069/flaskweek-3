@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&family=Lato:ital,wght@1,900&family=Lobster&family=Lora:ital,wght@1,700&family=Oswald:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;1,100&family=Raleway:wght@600&family=Roboto+Condensed&family=Rye&family=Tulpen+One&display=swap');
+h1 {
+    color: blue;
+    font-family: 'poppins';
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Lato'
+}
+
+p {
+    font-family: 'poppins';
+    color: rgba(75, 67, 67, 0.664)
+}
