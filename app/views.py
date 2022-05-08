@@ -1,6 +1,11 @@
+import sys
+
+# the sys method is to help us go into the folder of auth using the prepend method
+
 from flask import render_template,redirect,url_for,abort
 from app import app
-from .auth import forms 
+sys.path.append("/home/moringa/moringa_pre-prep/flask/pitch-app/app/auth")
+from forms import RegistrationForm , LoginForm  
 
 
 
