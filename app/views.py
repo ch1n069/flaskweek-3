@@ -23,7 +23,6 @@ def index():
 
 @app.route('/register' , methods=['GET','POST'])
 def register():
-    if form.validate_on
     forms = RegistrationForm()
     return render_template('register.html', title='Register', forms=forms)
     
