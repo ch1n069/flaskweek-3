@@ -11,4 +11,3 @@ db = SQLAlchemy(app)
 # users models  
 
 
-class Users(db.Model):
