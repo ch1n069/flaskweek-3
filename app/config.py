@@ -1,8 +1,16 @@
+import os 
+
+
+
+
 class Config:
     '''
     General configuration parent class
     '''
-    pass
+    
+
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:newpassword@localhost/pitch'
+
 
 
 
@@ -25,3 +33,10 @@ class DevConfig(Config):
     '''
 
     DEBUG = True
+
+
+
+config_options = {
+'development':DevConfig,
+'production':ProdConfig
+}
