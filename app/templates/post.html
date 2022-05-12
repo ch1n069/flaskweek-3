@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="card p-3 mb-2">
+    <div class="d-flex justify-content-between">
+        <div class="d-flex flex-row align-items-center">
+            <div class="icon">
+                <img class="rounded-circle article-img" src="{{url_for('static',filename='profile_pics/'+ post.author.image_file)}}" height=50>
+            </div>
+            <div class="ms-2 c-details">
+                <h6 class="mb-0">{{post.author.username}}</h6> <span> posted on {{post.date_posted.strftime('%Y-%m-%d')}}</span>
+            </div>
+        </div>
+        <div class="badge"> <span>{{post.category}}</span> </div>
+    </div>
+    <div class="mt-5">
+        <h3 class="heading">{{post.title}}</h3>
+        <p>{{post.content}}</p>
+        <div class="mt-5">
+            <!-- <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div> -->
+            <div class="mt-3"> <span class="text1">32 Applied <span class="text2">of 50 capacity</span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
