@@ -3,7 +3,7 @@
     <form method="POST" action="">
         {{forms.hidden_tag() }}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">New post</legend>
+            <legend class="border-bottom mb-4">{{ legend }}</legend>
 
             <div class="form-group">
                 {{forms.title.label(class="form-control-label")}} {% if forms.title.errors %} {{forms.title(class="form-control form-control-lg is-invalid")}}

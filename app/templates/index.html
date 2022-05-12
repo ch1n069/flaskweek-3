@@ -98,14 +98,20 @@
                         <div class="badge"> <span>{{post.category}}</span> </div>
                     </div>
                     <div class="mt-5">
-                        <h3 class="heading"><a class="article-title" href="{{url_for('main.post',post_id=post.id)}}">{{post.title}}</a></h3>
+                        <h3 class="heading"><a id="article" class="article-title" href="{{url_for('main.post',post_id=post.id)}}">{{post.title}}</a></h3>
                         <p>{{post.content}}</p>
                         <div class="mt-5">
                             <!-- <div class="progress">
                                 <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                             </div> -->
-                            <div class="mt-3"> <span class="text1">32 Applied <span class="text2">of 50 capacity</span></span>
+                            <div class="mt-3">
+                                <button class="btn btn-warning">Like</button><span class="mx-2">{{post.likes}}</span>
+                                <button class="btn btn-primary">Like</button><span class="mx-1">{{post.dislikes}}</span>
+
                             </div>
+
+
+
                         </div>
                     </div>
                 </div>

@@ -139,7 +139,7 @@ def new_post():
 
 
 
-    return render_template('create_post.html', title='new post',forms = forms)
+    return render_template('create_post.html', title='new post',forms = forms,legend='new post ' )
 
 
 @main.route("/post/<int:post_id>")
@@ -148,12 +148,26 @@ def post(post_id):
     return render_template('post.html', title=post.title, post=post)
 
 
-@main.route("/post/<int:post_id>update")
+@main.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
 @login_required
 def update_post(post_id):
     post = Pitch.query.get_or_404(post_id)
     if post.author != current_user:
         abort (403)
-    form = PostForm()
-    return render_template('create_post,html', title='Update post',form=form )
+    forms = PostForm()
+   
+    if forms.validate_on_submit():
+        post.title = forms.title.data
+        post.content = forms.content.data
+        db.session.commit()
+
+
+        flash('Your post has been updated', 'success')
+        return redirect(url_for('main.post',post_id=post.id))
+    elif request.method == 'GET':
+
+        forms.title.data = post.title
+        forms.content.data = post.content
+    
+    return render_template('create_post.html', title='Update post',forms=forms, legend='update post ')
     

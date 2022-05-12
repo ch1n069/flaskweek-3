@@ -5,6 +5,12 @@ h1 {
     font-weight: bold;
 }
 
+#article {
+    text-decoration: none;
+    color: black;
+    font-family: 'poppins';
+}
+
 h2 {
     font-family: 'Lato'
 }
