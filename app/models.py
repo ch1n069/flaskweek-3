@@ -38,6 +38,13 @@ class Pitch(db.Model):
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
     content = db.Column(db.Text(), nullable=False)
     user_id = db.Column(db.Integer(), db.ForeignKey('user.id'), nullable=False)
+    likes= db.Column(db.Integer, nullable=False,default=0)
+    dislikes= db.Column(db.Integer, nullable=False,default=0)
+    category= db.Column(db.String,nullable=False)
+    comments= db.Column(db.String, default='')
+
+
+
 
     def __repr__(self):
         return f"post('{self.title}', '{self.date_posted}')"
