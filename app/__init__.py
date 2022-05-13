@@ -35,7 +35,7 @@ def create_app(config_name):
 
     app = Flask(__name__)
     # Creating the app configurations
-    # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://moringa:newpassword@localhost/pitch'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://moringa:newpassword@localhost/pitchpostgres://sijcttxzgupmue:6320dfd827ee78689b697ac2d2416277d620fbb88ba3c335b2e9d0a4e533b09e@ec2-107-22-238-112.compute-1.amazonaws.com:5432/dcsav0n275511b'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = 'any secret string'
 
