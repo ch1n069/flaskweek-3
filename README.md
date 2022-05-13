@@ -22,6 +22,7 @@
 
 
 ## Installation
+` clone the repo
 
 
 
