@@ -40,5 +40,9 @@ The following technologies were used :
 - After push the your work to the said branch .
 
 
+## License 
+Heres a link to the license [license](license)
+
+
 
 
