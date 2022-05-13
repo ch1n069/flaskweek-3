@@ -9,7 +9,7 @@ class Config:
     '''
     
 
-    SQLALCHEMY_DATABASE_URI = 'postgres://sijcttxzgupmue:6320dfd827ee78689b697ac2d2416277d620fbb88ba3c335b2e9d0a4e533b09e@ec2-107-22-238-112.compute-1.amazonaws.com:5432/dcsav0n275511b'
+    # SQLALCHEMY_DATABASE_URI = 'postgres://sijcttxzgupmue:6320dfd827ee78689b697ac2d2416277d620fbb88ba3c335b2e9d0a4e533b09e@ec2-107-22-238-112.compute-1.amazonaws.com:5432/dcsav0n275511b'
 
 
 
@@ -21,7 +21,11 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    pass
+    DEBUG = True
+
+
+
+
 
 
 class DevConfig(Config):
@@ -32,7 +36,6 @@ class DevConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
 
-    DEBUG = True
 
 #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'

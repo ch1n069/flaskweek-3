@@ -30,7 +30,7 @@ bcrypt = Bcrypt()
 
 
 
-def create_app(config_name): 
+def create_app(development): 
 
 
     app = Flask(__name__)
@@ -40,7 +40,7 @@ def create_app(config_name):
     app.config['SECRET_KEY'] = 'any secret string'
 
     
-    app.config.from_object(config_options[config_name])
+    app.config.from_object(config_options[development])
 
 
 
