@@ -22,7 +22,11 @@
 
 
 ## Installation
-` clone the repo
+- clone the repo
+- cd into cloned repo using .
+- use your favorite editor to open the repo.
+- create a virtual environment . 
+- run The app .
 
 
 
