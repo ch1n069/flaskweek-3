@@ -8,7 +8,7 @@ from app.auth.forms import RegistrationForm, LoginForm  , UpdateAccountForm , Po
 from app.models import User , Pitch
 from app import db, bcrypt
 from flask_login import login_user, current_user, logout_user,login_required
-from app.email import mail_message
+# from app.email import mail_message
 
 
 
