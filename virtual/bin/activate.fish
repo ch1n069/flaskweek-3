@@ -57,7 +57,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV '/home/moringa/moringa_pre-prep/flask/pitch-app/env'
+set -gx VIRTUAL_ENV '/home/moringa/moringa_pre-prep/flask/pitch-app/virtual'
 
 # https://github.com/fish-shell/fish-shell/issues/436 altered PATH handling
 if test (echo $FISH_VERSION | head -c 1) -lt 3
