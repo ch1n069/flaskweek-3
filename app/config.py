@@ -34,6 +34,13 @@ class DevConfig(Config):
 
     DEBUG = True
 
+#  email configurations
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = os.environ.get("brunolalpachino@gmail.com")
+    MAIL_PASSWORD = os.environ.get("Elh4g9yq")
+
 
 
 config_options = {

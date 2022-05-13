@@ -12,9 +12,33 @@
 
 
 
+
+
+
 ## Author Bruno Gatiba
 
 
 ## Version V1.1
+
+
+## Installation
+
+
+
+## Technologies used in the Project 
+The following technologies were used :
+- python
+- Flask
+- HTML
+- CSS
+- Bootstrap
+## Bugs 
+* There are no known bugs during the deployment of this project.
+* If you find one one here how to go about it .
+- Clone the repo to your local machine .
+- create a branch and give a name of the feature you are trying to implement .
+- After push the your work to the said branch .
+
+
 
 
