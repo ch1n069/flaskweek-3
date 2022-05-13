@@ -6,6 +6,11 @@ h1 {
     font-size: 20px;
 }
 
+#uno {
+    border-radius: 10px;
+    background-color: red;
+}
+
 #brand {
     font-family: 'poppins';
     font-size: 30px;
