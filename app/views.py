@@ -139,7 +139,7 @@ def new_post():
 
 
 
-    return render_template('create_post.html', title='new post',forms = forms,legend='new post ' )
+    return render_template('create_post.html', title='new post',forms = forms,legend='create new post ' )
 
 
 @main.route("/post/<int:post_id>")

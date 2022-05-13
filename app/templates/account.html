@@ -1,6 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="content-section">
+<link rel="stylesheet" href="{{url_for('static', filename='account.css')}}">
+
+
+<div id="prof" class=" content-section mt-4 align-icenter">
     <div class="media">
         <img class="rounded-circle account-img" src="{{image_file}}" height=200>
         <div class="media-body">
@@ -14,7 +17,7 @@
         <form method="POST" action="" enctype="multipart/form-data">
             {{forms.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Update account info</legend>
+                <legend class="border-bottom mb-4">Update your account info</legend>
                 <div class="form-group">
                     {{forms.username.label(class="form-control-label")}} {% if forms.username.errors %} {{forms.username(class="form-control form-control-lg is-invalid")}}
                     <div class="invalid-feedback">

@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a id="brand" class="navbar-brand" href="#">Pitch Na sisi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul id="home" class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{url_for('main.index')}}"><span class="spanned">Home</span></a>
+                </li>
+                {% if current_user.is_authenticated %}
+
+                <li>
+                    <a class="nav-link" href="{{url_for('main.new_post')}}">New post</a>
+
+                </li>
+
+                <li>
+                    <a class="nav-link" href="{{url_for('main.account')}}">Account</a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="{{url_for('main.logout')}}">Logout</a>
+                </li>
+
+
+
+                </li>
+                {% else %}
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="{{url_for('main.login')}}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('main.register')}}">Sign up</a>
+                </li>
+                {% endif %}
+
+            </ul>
+        </div>
+    </div>
+</nav>
