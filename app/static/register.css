@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&family=Lato:ital,wght@1,900&family=Lobster&family=Lora:ital,wght@1,700&family=Oswald:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;1,100&family=Raleway:wght@600&family=Roboto+Condensed&family=Rye&family=Tulpen+One&display=swap');
+form {
+    width: 50%;
+    align-items: center;
+    border: 1px solid rgb(145, 140, 140);
+    margin-top: 5%;
+    border-radius: 3%;
+    justify-content: center;
+    margin-left: 17%;
+    padding: 3%;
+    background-color: #2f2fa2;
+    color: white;
+    font-family: 'poppins'
+}
+
+.already {
+    padding-left: 13%;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}

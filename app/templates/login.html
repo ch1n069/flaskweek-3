@@ -1,10 +1,11 @@
 {% extends 'base.html' %} {% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
 
 <div>
     <form method="POST" action="">
         {{forms.hidden_tag() }}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">login</legend>
+            <legend class="border-bottom mb-4 text-center">login-into your account</legend>
 
             <div class="form-group">
                 {{forms.email.label(class="form-control-label")}} {% if forms.email.errors %} {{forms.email(class="form-control form-control-lg is-invalid")}}
@@ -30,7 +31,7 @@
 
 
         </fieldset>
-        <div class="form-group">
+        <div class="form-group mt-4">
             {{forms.submit(class="btn btn-outline-primary")}}
 
 
@@ -42,7 +43,7 @@
     </form>
 </div>
 <div class="border-top pt-3">
-    <small class="text-muted">
+    <small class="already text-muted">
         Register for an account ? <a class="ml-2" href="{{url_for('main.register')}}">Sign up</a>
     </small>
 

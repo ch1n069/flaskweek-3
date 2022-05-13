@@ -1,10 +1,11 @@
 {% extends 'base.html' %} {% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='register.css')}}">
 
 <div class="content-section">
     <form method="POST" action="">
         {{forms.hidden_tag() }}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Join Us Today</legend>
+            <legend class="border-bottom mb-4 text-center">Register Today</legend>
             <div class="form-group">
                 {{forms.username.label(class="form-control-label")}} {% if forms.username.errors %} {{forms.username(class="form-control form-control-lg is-invalid")}}
                 <div class="invalid-feedback">
@@ -39,7 +40,7 @@
                 {% else %} {{forms.confirm_password(class="form-control form-control-lg")}} {% endif %}
             </div>
         </fieldset>
-        <div class="form-group">
+        <div class="form-group mt-2">
             {{forms.submit(class="btn btn-outline-primary")}}
 
 
@@ -48,7 +49,7 @@
     </form>
 </div>
 <div class="border-top pt-3">
-    <small class="text-muted">
+    <small class="already text-muted mx-5">
         Already have an account ? <a class="ml-2" href="{{url_for('main.login')}}">Sign in</a>
     </small>
 
