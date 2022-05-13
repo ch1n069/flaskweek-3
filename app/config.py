@@ -1,3 +1,4 @@
+from distutils.debug import DEBUG
 import os 
 
 
@@ -7,34 +8,11 @@ class Config:
     '''
     General configuration parent class
     '''
+
+    SECRET_KEY = '2345678uytrsghgsfaetyrjhsvsfZGv'
     
 
-    # SQLALCHEMY_DATABASE_URI = 'postgres://sijcttxzgupmue:6320dfd827ee78689b697ac2d2416277d620fbb88ba3c335b2e9d0a4e533b09e@ec2-107-22-238-112.compute-1.amazonaws.com:5432/dcsav0n275511b'
-
-
-
-
-class ProdConfig(Config):
-    '''
-    Production  configuration child class
-
-    Args:
-        Config: The parent configuration class with General configuration settings
-    '''
-    DEBUG = True
-
-
-
-
-
-
-class DevConfig(Config):
-    '''
-    Development  configuration child class
-
-    Args:
-        Config: The parent configuration class with General configuration settings
-    '''
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:newpassword@localhost/pitch'
 
 
 #  email configurations
@@ -46,7 +24,41 @@ class DevConfig(Config):
 
 
 
+
+
+
+class ProdConfig(Config):
+    '''
+    Production  configuration child class
+
+    Args:
+        Config: The parent configuration class with General configuration settings
+    '''
+
+    SQLALCHEMY_DATABASE_URI = 'postgres://sijcttxzgupmue:6320dfd827ee78689b697ac2d2416277d620fbb88ba3c335b2e9d0a4e533b09e@ec2-107-22-238-112.compute-1.amazonaws.com:5432/dcsav0n275511b'
+    
+    DEBUG = False
+
+
+
+class DevConfig(Config):
+    '''
+    Development  configuration child class
+
+    Args:
+        Config: The parent configuration class with General configuration settings
+
+    '''
+
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:newpassword@localhost/pitch'
+
+
+    DEBUG = True
+
+
 config_options = {
 'development':DevConfig,
 'production':ProdConfig
 }
+
+    # # app.config['SQLALCHEMY_DATABASE_URI'] ='postgresql+psycopg2://moringa:newpassword@localhost/watchlist'
