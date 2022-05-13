@@ -1,0 +1,15 @@
+.card {
+    width: 500px;
+    border-radius: 10%;
+}
+
+#brand {
+    font-family: 'poppins';
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#home {
+    font-family: 'poppins';
+    font-weight: 600;
+}

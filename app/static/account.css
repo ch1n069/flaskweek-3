@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&family=Lato:ital,wght@1,900&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,800;1,100&family=Raleway:wght@600&family=Roboto+Condensed&family=Rye&display=swap');
+#prof {
+    border: 2px solid rgb(107, 102, 102);
+    width: 600px;
+    padding: 2%;
+    border-radius: 5%;
+    font-family: 'poppins';
+}
+
+legend {
+    color: #F36365;
+}
