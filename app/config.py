@@ -9,7 +9,7 @@ class Config:
     '''
     
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:newpassword@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgres://sijcttxzgupmue:6320dfd827ee78689b697ac2d2416277d620fbb88ba3c335b2e9d0a4e533b09e@ec2-107-22-238-112.compute-1.amazonaws.com:5432/dcsav0n275511b'
 
 
 
