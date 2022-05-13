@@ -8,6 +8,7 @@ from app.auth.forms import RegistrationForm, LoginForm  , UpdateAccountForm , Po
 from app.models import User , Pitch
 from app import db, bcrypt
 from flask_login import login_user, current_user, logout_user,login_required
+from app.email import mail_message
 
 
 
@@ -39,7 +40,9 @@ def register():
         user  = User(username=forms.username.data, email=forms.email.data,password=hashed_password)
         db.session.add(user)
         db.session.commit()
+        # mail_message("Welcome to pitch na sisi ","templates/email/welcome_user",user.email,user=user)
         flash(f'Account created !!','success')
+
         return redirect(url_for('main.login')) 
 
     return render_template('register.html', title='Register', forms=forms)
